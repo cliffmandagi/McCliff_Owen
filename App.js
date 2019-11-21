@@ -1,27 +1,47 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { TouchableOpacity, View, Image } from 'react-native';
 import { Header } from 'react-native-elements';
-import StackNav from './navigator/StackNav';
+import { createAppContainer, createStackNavigator } from 'react-navigation';
 
-export default function App() {
-  return (
-    <View style={{ flex: 1 }}>
-      <Header
-        backgroundColor="white"
-        centerComponent={
-        <Image
-          source={require('./assets/TestLogo.png') }
-          style={{ height: 40, width: 110 }}
-        />}
-        leftComponent={ 
-          <TouchableOpacity>
-            <Image
-              source={require('./assets/account.png')}
-            />
-          </TouchableOpacity>
-        }
-      />
-      <StackNav/>
-    </View>
-  );
+import StackNav from './navigator/StackNav';
+import Profile from './screens/Profile';
+
+class App extends (Component, React.Component) {
+  render(){
+    return (
+      <View style={{ flex: 1 }}>
+        <Header
+          backgroundColor="white"
+          centerComponent={
+          <Image
+            source={require('./assets/TestLogo.png') }
+            style={{ height: 40, width: 110 }}
+          />}
+          leftComponent={ 
+            <TouchableOpacity>
+              <Image
+                source={require('./assets/account.png')}
+              />
+            </TouchableOpacity>
+          }
+        />
+        <StackNav/>
+      </View>
+    );
+  }
 }
+
+const StackNavigator =  createStackNavigator({
+  App: App,
+  Profile: Profile
+},{
+  defaultNavigationOptions: ({ navigation }) => {
+      return {
+          header: (
+              <View></View>
+          ),
+      }
+}
+});
+
+export default createAppContainer(StackNavigator);

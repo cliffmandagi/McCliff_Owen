@@ -1,27 +1,29 @@
 import React, { Component } from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-  Image,
-  Alert,
-  ScrollView,
-  FlatList,
-  Button
-} from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Image, FlatList, Button } from 'react-native';
+import { createAppContainer, createStackNavigator, createNavigationContainer } from 'react-navigation';
 
-export default class Blog extends Component {
+import Profile from './Profile';
 
+class Movie1 extends Component {
+    render() {
+      return (
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+          <Text>This is SI</Text>
+        </View>
+      );
+    }
+}
+
+class Home extends (Component, React.Component) {
   constructor(props) {
     super(props);
     this.state = {
       data: [
-        {id:1, title: "Frozen 2",                  time:"2018-08-01 12:15 pm", image:"https://cdn.cgv.id/uploads/movie/compressed/19039100.jpg", description:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean  ligula..."},
-        {id:2, title: "Charlie's Angels",             time:"2018-08-12 12:00 pm", image:"https://cdn.cgv.id/uploads/movie/compressed/19038000.jpg", description:"Lorem  dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula..."} ,
-        {id:3, title: "Ford v Ferrari",            time:"2017-08-05 12:21 pm", image:"https://cdn.cgv.id/uploads/movie/compressed/19036200.jpg", description:"Lorem ipsum dolor sit , consectetuer  elit. Aenean commodo ligula..."}, 
-        {id:4, title: "Midway",         time:"2015-08-12 12:00 pm", image:"https://image-store.slidesharecdn.com/bf45e2c8-b848-47ad-8a28-ea0730fd97be-original.jpeg", description:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula..."}, 
-        {id:5, title: "Senior",           time:"2013-06-12 12:11 pm", image:"http://cinemaxx.cinemaxxtheater.com/Gallery/Movies/Thumbnail/SENIOR-post.jpg", description:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  commodo ligula..."},
+        {id:1, title: "Frozen 2", time:"2018-08-01 12:15 pm", image:"https://cdn.cgv.id/uploads/movie/compressed/19039100.jpg", description:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean  ligula..."},
+        {id:2, title: "Charlie's Angels", time:"2018-08-12 12:00 pm", image:"https://cdn.cgv.id/uploads/movie/compressed/19038000.jpg", description:"Lorem  dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula..."} ,
+        {id:3, title: "Ford v Ferrari", time:"2017-08-05 12:21 pm", image:"https://cdn.cgv.id/uploads/movie/compressed/19036200.jpg", description:"Lorem ipsum dolor sit , consectetuer  elit. Aenean commodo ligula..."}, 
+        {id:4, title: "Midway", time:"2015-08-12 12:00 pm", image:"https://image-store.slidesharecdn.com/bf45e2c8-b848-47ad-8a28-ea0730fd97be-original.jpeg", description:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula..."}, 
+        {id:5, title: "Senior", time:"2013-06-12 12:11 pm", image:"http://cinemaxx.cinemaxxtheater.com/Gallery/Movies/Thumbnail/SENIOR-post.jpg", description:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  commodo ligula..."},
       ]
     };
   }
@@ -41,7 +43,9 @@ export default class Blog extends Component {
             const item = post.item;
             return (
               <View style={styles.card}>
-                <Image style={styles.cardImage} source={{uri:item.image}}/>
+                <TouchableOpacity onPress={() => {}}>
+                    <Image style={styles.cardImage} source={{uri:item.image}}/>
+                </TouchableOpacity>
                 <View style={styles.cardHeader}>
                   <View>
                     <Text style={styles.title}>{item.title}</Text>
@@ -59,6 +63,8 @@ export default class Blog extends Component {
     );
   }
 }
+
+export default Home;
 
 const styles = StyleSheet.create({
   container:{
