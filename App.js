@@ -5,6 +5,7 @@ import { createAppContainer, createStackNavigator } from 'react-navigation';
 
 import StackNav from './navigator/StackNav';
 import Profile from './screens/Profile';
+import Login from './screens/Login';
 
 class App extends (Component, React.Component) {
   render(){

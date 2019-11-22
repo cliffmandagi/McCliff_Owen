@@ -1,18 +1,8 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Image, FlatList, Button } from 'react-native';
-import { createAppContainer, createStackNavigator, createNavigationContainer } from 'react-navigation';
+import { createAppContainer, createStackNavigator, createSwitchNavigator } from 'react-navigation';
 
-import Profile from './Profile';
-
-class Movie1 extends Component {
-    render() {
-      return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-          <Text>This is SI</Text>
-        </View>
-      );
-    }
-}
+import Movie1 from './movie/Movie1';
 
 class Home extends (Component, React.Component) {
   constructor(props) {
