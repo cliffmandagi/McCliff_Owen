@@ -18,7 +18,9 @@ class App extends (Component, React.Component) {
             style={{ height: 40, width: 110 }}
           />}
           leftComponent={ 
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => this.props.navigation.navigate('Profile')}
+            >
               <Image
                 source={require('./assets/account.png')}
               />
