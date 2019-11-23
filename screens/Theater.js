@@ -4,6 +4,7 @@ import { Button } from 'react-native-elements';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 import gkcc from './theater/gkcc';
+import mantos1 from './theater/mantos1';
 
 const LocImg = <Image source={require('../assets/location.png')} style={{ height: 25, width: 25 }}/>
 
@@ -21,7 +22,8 @@ class Theater extends (Component, React.Component) {
               onPress={() => this.props.navigation.navigate('gkcc')}>
                 <Text> GRAND KAWANUA CITY CGV </Text>
               </TouchableOpacity>
-              <TouchableOpacity style={{paddingHorizontal:75, paddingVertical:11, backgroundColor: 'white', borderRadius:4, marginBottom: 7, alignItems: 'center'}}>
+              <TouchableOpacity style={{paddingHorizontal:75, paddingVertical:11, backgroundColor: 'white', borderRadius:4, marginBottom: 7, alignItems: 'center'}}
+              onPress={() => this.props.navigation.navigate('mantos1')}>
                 <Text> MANTOS 1 XXI </Text>
               </TouchableOpacity>
               <TouchableOpacity style={{paddingHorizontal:75, paddingVertical:11, backgroundColor: 'white', borderRadius:4, marginBottom: 7, alignItems: 'center'}}>
