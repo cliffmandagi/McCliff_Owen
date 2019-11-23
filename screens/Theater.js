@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Picker, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, Text, View, Picker, TouchableOpacity, Image, ScrollView } from 'react-native';
 import { Button } from 'react-native-elements';
-import { ScrollView } from 'react-native-gesture-handler';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
+
+import gkcc from './theater/gkcc';
 
 const LocImg = <Image source={require('../assets/location.png')} style={{ height: 25, width: 25 }}/>
 
-class Theater extends Component {
+class Theater extends (Component, React.Component) {
   render() {
     return (
       <View style={{ flex: 1, backgroundColor: "#E6E6E6"}}>
@@ -15,7 +17,8 @@ class Theater extends Component {
           </View>
           <View style={{ marginBottom: 8 }}>
             <ScrollView>
-              <TouchableOpacity style={{paddingHorizontal:75, paddingVertical:11, backgroundColor: 'white', borderRadius:4, marginBottom: 7, alignItems: 'center'}}>
+              <TouchableOpacity style={{paddingHorizontal:75, paddingVertical:11, backgroundColor: 'white', borderRadius:4, marginBottom: 7, alignItems: 'center'}}
+              onPress={() => this.props.navigation.navigate('gkcc')}>
                 <Text> GRAND KAWANUA CITY CGV </Text>
               </TouchableOpacity>
               <TouchableOpacity style={{paddingHorizontal:75, paddingVertical:11, backgroundColor: 'white', borderRadius:4, marginBottom: 7, alignItems: 'center'}}>
@@ -35,4 +38,17 @@ class Theater extends Component {
   }
 }
 
-export default Theater;
+const StackNavigator =  createStackNavigator({
+  Theater: Theater,
+  gkcc: gkcc
+},{
+  defaultNavigationOptions: ({ navigation }) => {
+      return {
+          header: (
+              <View></View>
+          ),
+      }
+}
+});
+
+export default createAppContainer(StackNavigator);

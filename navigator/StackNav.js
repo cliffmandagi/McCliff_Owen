@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { createAppContainer, createBottomTabNavigator } from 'react-navigation';
+import { createAppContainer, createBottomTabNavigator, createSwitchNavigator } from 'react-navigation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { Header } from 'react-native-elements';
 
 import Home from '../screens/Home';
 import Theater from '../screens/Theater';
 import Profile from '../screens/Profile';
+
+import Movie1 from '../screens/movie/Movie1';
+
+class StackNav extends (Component, React.Component){
+    render(){
+        return <Container/>;
+    }
+}
 
 const TabNavigator = createBottomTabNavigator({
     Home: Home,
@@ -32,4 +40,11 @@ const TabNavigator = createBottomTabNavigator({
     initialRouteName: 'Home'
 })
 
-export default createAppContainer(TabNavigator);
+const SwitchNav = createSwitchNavigator({
+    TabNavigator: TabNavigator,
+    Movie1: Movie1
+})
+
+const Container = createAppContainer(SwitchNav);
+
+export default StackNav;

@@ -27,7 +27,7 @@ export default class Login extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Image style={styles.bgImage} source={{ uri: "https://lorempixel.com/900/1400/nightlife/2/" }}/>
+        <Image style={styles.bgImage} source={{ uri: "https://fsb.zobj.net/crop.php?r=RjlBFzpNCimGpwBJDSDXCSULL5VuuSSObLQri2FdleiyplFBDY9gI5O6xq2v45gX9w2eN9WzJSmh5jBMuFKK-G1HmyV9_n4wMSPBzZOlxlf3z2ueJbhb5xE5qs9t-yMCbJj1slBRcHJ-uEsT" }}/>
         <View style={styles.inputContainer}>
           <TextInput style={styles.inputs}
               placeholder="Email"
@@ -82,15 +82,6 @@ const styles = StyleSheet.create({
     marginBottom:20,
     flexDirection: 'row',
     alignItems:'center',
-
-    shadowColor: "#808080",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-
     elevation: 5,
   },
   inputs:{
@@ -141,11 +132,9 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   bgImage:{
-    flex: 1,
-    resizeMode,
     position: 'absolute',
     width: '100%',
-    height: '100%',
+    height: 1000,
     justifyContent: 'center',
   },
   btnText:{

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Image, FlatList, Button } from 'react-native';
 import { createAppContainer, createStackNavigator, createSwitchNavigator } from 'react-navigation';
+import { SwitchActions } from 'react-navigation';
 
 import Movie1 from './movie/Movie1';
 

@@ -36,7 +36,7 @@ class App extends (Component, React.Component) {
 
 const StackNavigator =  createStackNavigator({
   App: App,
-  Profile: Profile
+  Profile: Profile,
 },{
   defaultNavigationOptions: ({ navigation }) => {
       return {
