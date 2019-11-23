@@ -7,10 +7,10 @@ export default class MapShow extends React.Component {
     return (
         <MapView style={styles.mapStyle}
             region={{
-                latitude: 1.472337,
-                longitude: 124.831346,
-                latitudeDelta: 0.003,
-                longitudeDelta: 0.003,
+                latitude: 1.471125,
+                longitude: 124.831089,
+                latitudeDelta: 0.0007,
+                longitudeDelta: 0.0007,
             }}
         />
     );

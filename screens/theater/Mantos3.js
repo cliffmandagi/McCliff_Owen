@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Image, ScrollView } from 'react-native';
 import { Header } from 'react-native-elements';
 
-import MapShow2 from '../../MapShow2';
+import MapShow3 from '../../MapShow3';
 
 const MONDAY = (
     <View>
@@ -1348,7 +1348,7 @@ const SUNDAY = (
     </View>
 )
 
-class Mantos1 extends Component {
+class Mantos3 extends Component {
     constructor(){
         super();
         this.state = {
@@ -1360,7 +1360,7 @@ class Mantos1 extends Component {
             <ScrollView>
                 <View>
                 <View>
-                    <MapShow2/>
+                    <MapShow3/>
                 </View>
                 <View>
                     <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
@@ -1415,4 +1415,4 @@ class Mantos1 extends Component {
   }
 }
 // </View>{this.state.Jadwal}
-export default Mantos1;
+export default Mantos3;
