@@ -6,8 +6,13 @@ import { createAppContainer, createStackNavigator } from 'react-navigation';
 class ProfileScreen extends Component {
   render() {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Profile</Text>
+      <View style={{ justifyContent: 'center', alignItems: 'center', flex: 1 }}>
+        <Text style={{ fontSize: 12 }}>
+          MultiPlatform Final Project
+        </Text>
+        <Text style={{ fontSize: 10 }}>
+          Copyright © 2019 :v
+        </Text>
       </View>
     );
   }
@@ -16,7 +21,7 @@ class ProfileScreen extends Component {
 class Profile extends (Component, React.Component) {
   render() {
     return (
-      <View style={{ flex: 1 }}>
+      <View style={{ flex: 1, backgroundColor: '#E6E6E6' }}>
         <Header
             placement="left"
             backgroundColor="white"
@@ -30,7 +35,7 @@ class Profile extends (Component, React.Component) {
                 />
               </TouchableOpacity>
             }
-            centerComponent={{ text: "Profile", style: {fontSize: 19, fontWeight: "bold"}}}
+            centerComponent={{ text: "About", style: {fontSize: 19, fontWeight: "bold"}}}
           />
         <ProfileScreen/>
       </View>
