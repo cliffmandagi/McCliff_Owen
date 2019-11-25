@@ -10,11 +10,11 @@ class Home extends (Component, React.Component) {
     super(props);
     this.state = {
       data: [
-        {id:1, title: "Frozen 2", time:"2018-08-01 12:15 pm", image:"https://cdn.cgv.id/uploads/movie/compressed/19039100.jpg", description:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean  ligula..."},
-        {id:2, title: "Charlie's Angels", time:"2018-08-12 12:00 pm", image:"https://cdn.cgv.id/uploads/movie/compressed/19038000.jpg", description:"Lorem  dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula..."} ,
-        {id:3, title: "Ford v Ferrari", time:"2017-08-05 12:21 pm", image:"https://cdn.cgv.id/uploads/movie/compressed/19036200.jpg", description:"Lorem ipsum dolor sit , consectetuer  elit. Aenean commodo ligula..."}, 
-        {id:4, title: "Midway", time:"2015-08-12 12:00 pm", image:"https://image-store.slidesharecdn.com/bf45e2c8-b848-47ad-8a28-ea0730fd97be-original.jpeg", description:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula..."}, 
-        {id:5, title: "Senior", time:"2013-06-12 12:11 pm", image:"http://cinemaxx.cinemaxxtheater.com/Gallery/Movies/Thumbnail/SENIOR-post.jpg", description:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  commodo ligula..."},
+        {id:1, title: "Frozen 2", time:"2018-08-01 12:15 pm", image:"https://cdn.cgv.id/uploads/movie/compressed/19039100.jpg", description:"Anna, Elsa, Kristoff, Olaf and Sven leave Arendelle to travel to an ancient, autumn-bound forest of an enchanted land. They set out to find the origin of Elsa's powers in order to save their kingdom."},
+        {id:2, title: "Charlie's Angels", time:"2018-08-12 12:00 pm", image:"https://cdn.cgv.id/uploads/movie/compressed/19038000.jpg", description:"When a young systems engineer blows the whistle on a dangerous technology, Charlie's Angels are called into action, putting their lives on the line to protect us all."} ,
+        {id:3, title: "Ford v Ferrari", time:"2017-08-05 12:21 pm", image:"https://cdn.cgv.id/uploads/movie/compressed/19036200.jpg", description:"American car designer Carroll Shelby and driver Ken Miles battle corporate interference, the laws of physics and their own personal demons to build a revolutionary race car for Ford and challenge Ferrari at the 24 Hours of Le Mans in 1966."}, 
+        {id:4, title: "Midway", time:"2015-08-12 12:00 pm", image:"https://image-store.slidesharecdn.com/bf45e2c8-b848-47ad-8a28-ea0730fd97be-original.jpeg", description:"The story of the Battle of Midway, told by the leaders and the sailors who fought it."}, 
+        {id:5, title: "Senior", time:"2013-06-12 12:11 pm", image:"http://cinemaxx.cinemaxxtheater.com/Gallery/Movies/Thumbnail/SENIOR-post.jpg", description:"Nakula Jamie Megantara (Jerome Kurnia), Chairperson of MOS (Student Orientation Period) at Permata Bangsa High School, crossed Spanish-Indonesian, as if he could not feel happy, sad, afraid..."},
       ]
     };
   }
