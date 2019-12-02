@@ -9,8 +9,10 @@ import {
   Image,
   Alert
 } from 'react-native';
+import Main from '../Main';
+import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 
-export default class Login extends Component {
+class Login extends Component {
 
   constructor(props) {
     super(props);
@@ -27,7 +29,14 @@ export default class Login extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Image style={styles.bgImage} source={{ uri: "https://fsb.zobj.net/crop.php?r=RjlBFzpNCimGpwBJDSDXCSULL5VuuSSObLQri2FdleiyplFBDY9gI5O6xq2v45gX9w2eN9WzJSmh5jBMuFKK-G1HmyV9_n4wMSPBzZOlxlf3z2ueJbhb5xE5qs9t-yMCbJj1slBRcHJ-uEsT" }}/>
+        <Image style={styles.bgImage} source={require('../assets/d43953045c77a1d9bcefc95b0f2d1243.jpg')}/>
+        <View style={{ marginBottom: 50 }}>
+          <Image
+            source={require('../assets/TestLogo.png')}
+            style={{ height: 70, width: 170 }}
+          />
+        </View>
+
         <View style={styles.inputContainer}>
           <TextInput style={styles.inputs}
               placeholder="Email"
@@ -36,7 +45,7 @@ export default class Login extends Component {
               onChangeText={(email) => this.setState({email})}/>
           <Image style={styles.inputIcon} source={{uri: 'https://img.icons8.com/nolan/40/000000/email.png'}}/>
         </View>
-        
+
         <View style={styles.inputContainer}>
           <TextInput style={styles.inputs}
               placeholder="Password"
@@ -50,7 +59,7 @@ export default class Login extends Component {
             <Text style={styles.btnText}>Forgot your password?</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={[styles.buttonContainer, styles.loginButton]} onPress={() => this.onClickListener('login')}>
+        <TouchableOpacity style={[styles.buttonContainer, styles.loginButton]} onPress={() => this.props.navigation.navigate('Main')}>
           <Text style={styles.loginText}>Login</Text>
         </TouchableOpacity>
 
@@ -62,6 +71,13 @@ export default class Login extends Component {
     );
   }
 }
+
+const A = createSwitchNavigator({
+  Login: Login,
+  Main: Main
+})
+
+export default createAppContainer(A);
 
 const resizeMode = 'center';
 
