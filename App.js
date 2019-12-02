@@ -6,7 +6,7 @@ import Profile from './screens/Profile';
 import Login from './screens/Login';
 import Main from './Main';
 
-class App extends (Component, React.Component) {
+class App extends React.Component {
   render(){
     return (
       <Login/>
